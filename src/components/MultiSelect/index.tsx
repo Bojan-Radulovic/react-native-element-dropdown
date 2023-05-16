@@ -25,6 +25,7 @@ import {
   View,
   ViewStyle,
   StatusBar,
+  ScrollView,
 } from 'react-native';
 import { useDetectDevice } from '../../toolkits';
 import { useDeviceOrientation } from '../../useDeviceOrientation';
@@ -668,6 +669,7 @@ const MultiSelectComponent: <T>(
             inside && styles.flex1,
           ])}
         >
+          <ScrollView horizontal>
           {list.map((e) => {
             if (renderSelectedItem) {
               return (
@@ -726,6 +728,7 @@ const MultiSelectComponent: <T>(
               );
             }
           })}
+          </ScrollView>
         </View>
       );
     };
